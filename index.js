@@ -16,6 +16,7 @@ const generateHTML = ({ name, location, github, linkedin }) =>
       <h1 class="display-4">${title}</h1>
       <p class="lead">${description}.</p>
       <h2 class="webAddress">${webAddress}</h2>
+      <p class="container">${img}</p>
       <h3>Example heading <span class="badge bg-secondary">USER STORY</span></h3>
       <ul class="list-group">
         <li class="list-group-item">AS ${as}</li>
@@ -34,6 +35,11 @@ const generateHTML = ({ name, location, github, linkedin }) =>
         <li class="list-group-item">GitHub URL: ${url}</li>
         <li class="list-group-item">LinkedIn: ${linkedIn}</li>
         <li class="list-group-item">E-Mail: ${eMail}</li>
+      </ul>
+      <h3>Example heading <span class="badge bg-secondary">COLLABORATOR(S)</span></h3>
+      <ul class="list-group">
+        <li class="list-group-item">Collaborator Name: ${collabName}</li>
+        <li class="list-group-item">Collaborator GitHub: ${collabGitHub}</li>
       </ul>
     </div>
   </header>
@@ -55,22 +61,27 @@ inquirer
         {
             type: 'input',
             name: 'webAddress',
-            message: 'What is the web address to the site you created? (copy and paste URL)',
+            message: 'What is the web address to your site ? (copy and paste URL)',
+        },
+        {
+            type: 'input',
+            name: 'img',
+            message: 'Paste an image of your web page.',
         },
         {
             type: 'input',
             name: 'as',
-            message: 'Creating your User Story: What is your User Story? (1 - As..., 2 - I WANT..., 3 - SO THAT...) Part 1 of 3: Finish the "AS" statement (DO NOT USE THE WORD "AS" AT THE BEGINING OF YOUR STATEMENT',
+            message: 'Creating your User Story: What is your User Story? (1 - AS..., 2 - I WANT..., 3 - SO THAT...) Part 1 of 3: Finish the "AS" statement (DO NOT USE THE WORD "AS" AT THE BEGINING OF YOUR STATEMENT',
         },
         {
             type: 'input',
             name: 'iWant',
-            message: 'Creating your User Story: What is your User Story? (1 - As..., 2 - I WANT..., 3 - SO THAT...) Part 2 of 3: Finish the "I WANT" statement (DO NOT USE THE WORDS "I WANT" AT THE BEGINING OF YOUR STATEMENT',
+            message: 'Creating your User Story: What is your User Story? (1 - AS..., 2 - I WANT..., 3 - SO THAT...) Part 2 of 3: Finish the "I WANT" statement (DO NOT USE THE WORDS "I WANT" AT THE BEGINING OF YOUR STATEMENT',
         },
         {
             type: 'input',
             name: 'soThat',
-            message: 'Creating your User Story: What is your User Story? (1 - As..., 2 - I WANT..., 3 - SO THAT...) Part 3 of 3: Finish the "SO THAT" statement (DO NOT USE THE WORDS "SO THAT" AT THE BEGINING OF YOUR STATEMENT',
+            message: 'Creating your User Story: What is your User Story? (1 - AS..., 2 - I WANT..., 3 - SO THAT...) Part 3 of 3: Finish the "SO THAT" statement (DO NOT USE THE WORDS "SO THAT" AT THE BEGINING OF YOUR STATEMENT',
         },
         {
             type: 'input',
@@ -96,7 +107,7 @@ inquirer
             type: 'input',
             name: 'userName',
             message: 'Enter your GitHub Username.',
-        },{
+        }, {
             type: 'input',
             name: 'url',
             message: 'Enter your GitHub URL.',
@@ -113,9 +124,14 @@ inquirer
         },
         {
             type: 'input',
-            name: 'collaborators',
-            message: 'List any collaborators, if any, with their GitHub profiles.',
+            name: 'collabName',
+            message: 'List the name any collaborator(s), if any, of those you collaborated with. If none enter "N/A"',
         },
+        {
+            type: `input`,
+            name: `collabGitHub`,
+            message: `List the GitHub Profile Name(s), if any, of those you collaborated with. If none, enter "N/A"`
+        }
     ])
     .then((answers) => {
         const htmlPageContent = generateHTML(answers);
