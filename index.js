@@ -107,7 +107,8 @@ inquirer
             type: 'input',
             name: 'userName',
             message: 'Enter your GitHub Username.',
-        }, {
+        },
+        {
             type: 'input',
             name: 'url',
             message: 'Enter your GitHub URL.',
@@ -125,12 +126,12 @@ inquirer
         {
             type: 'input',
             name: 'collabName',
-            message: 'List the name any collaborator(s), if any, of those you collaborated with. If none enter "N/A"',
+            message: 'List the name of who you collaborated with. If none, enter "N/A"',
         },
         {
             type: `input`,
             name: `collabGitHub`,
-            message: `List the GitHub Profile Name(s), if any, of those you collaborated with. If none, enter "N/A"`
+            message: `List the GitHub Profile Name of who you collaborated with. If none, enter "N/A"`
         }
     ])
     .then((answers) => {
