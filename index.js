@@ -15,7 +15,7 @@ const generateHTML = ({ name, location, github, linkedin }) =>
     <div class="container">
       <h1 class="display-4">${title}</h1>
       <p class="lead">${description}.</p>
-      <h2 class="webAddress">${title}</h2>
+      <h2 class="webAddress">${webAddress}</h2>
       <h3>Example heading <span class="badge bg-secondary">USER STORY</span></h3>
       <ul class="list-group">
         <li class="list-group-item">AS ${as}</li>
