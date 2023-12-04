@@ -1,14 +1,14 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateHTML = ({ name, location, github, linkedin }) =>
+const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, given, when, then, userName, url, linkedIn, eMail, collabName, collabGitHub }) =>
     `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
-  <title>Document</title>
+  <title>README</title>
 </head>
 <body>
   <header class="p-5 mb-4 header bg-light">
@@ -51,7 +51,7 @@ inquirer
         {
             type: 'input',
             name: 'title',
-            message: 'What is the title of your REPO?',
+            message: 'What is the title of your Web Page?',
         },
         {
             type: 'input',
