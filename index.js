@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateHTML = ({ title, webAddress, description, img, instructions, as, iWant, soThat, given, when, then, userName, url, linkedIn, eMail, collabName, collabGitHub, resourceName, resourceURL }) =>
+const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, given, when, then, steps, userName, instructions, collabName, collabGitHub,, collabGitHubURL, license, tests, question, resourceName, resourceURL, userName, gitURL, linkedIn, eMail }) =>
     `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,8 +30,9 @@ const generateHTML = ({ title, webAddress, description, img, instructions, as, i
       <h3>TABLE OF CONTENTS</span></h3>
       <ul class="list-group">
         <li class="list-group-item"><a href="#userStory">USER STORY</li>
-        <li class="list-group-item"><a href="#usage">USAGE</a></li>
         <li class="list-group-item"><a href="#acceptCrit">ACEEPTANCE CRITERIA</li>
+        <li class="list-group-item"><a href="#installation">INSTALLATION</li>
+        <li class="list-group-item"><a href="#usage">USAGE</a></li>
         <li class="list-group-item"><a href="#license">LICENSE</li>  
         <li class="list-group-item"><a href="#contributing">CONTRIBUTING</li> 
         <li class="list-group-item"><a href="#tests">TESTS</li>
@@ -60,19 +61,17 @@ const generateHTML = ({ title, webAddress, description, img, instructions, as, i
 
       <br>
 
-      <h3><a id="usage">USAGE</a></h3>
-      <h3>INSTALLATION</span></h3>
+      <h3><a id="installation">INTALLATION</h3>
       <ul class="list-group">
-        <li class="list-group-item">AS ${instructions}</li>
+        <li class="list-group-item">${steps}</li>
       </ul>
 
       <br>
 
-      <h3><a id="license">LICENSE</h3>
+      <h3><a id="usage">USAGE</a></h3>
+      <h3>INSTALLATION</span></h3>
       <ul class="list-group">
-        <li class="list-group-item">GIVEN ${given}</li>
-        <li class="list-group-item">WHEN ${when}</li>
-        <li class="list-group-item">THEN ${then}</li>
+        <li class="list-group-item">${instructions}</li>
       </ul>
 
       <br>
@@ -80,51 +79,43 @@ const generateHTML = ({ title, webAddress, description, img, instructions, as, i
       <h3><a id="contributing">CONTRIBUTING</h3>
       <ul class="list-group">
         <li class="list-group-item">Collaborator Name: ${collabName}</li>
-        <li class="list-group-item">Collaborator GitHub: ${collabGitHub}</li>
+        <li class="list-group-item">Collaborator GitHub: ${collabGitHub}: <a href="${collabGitHubURL}"></li>
+      </ul>
+
+      <br>
+
+      <h3><a id="license">LICENSE</h3>
+      <ul class="list-group">
+        <li class="list-group-item">${license}</li>
       </ul>
 
       <br>
 
       <h3><a id="tests">TESTS</h3>
       <ul class="list-group">
-        <li class="list-group-item">GIVEN ${given}</li>
-        <li class="list-group-item">WHEN ${when}</li>
-        <li class="list-group-item">THEN ${then}</li>
+        <li class="list-group-item">${tests}</li>
       </ul>
 
       <br>
 
       <h3><a id="questions">QUESTIONS</h3>
       <ul class="list-group">
-        <li class="list-group-item">GIVEN ${given}</li>
-        <li class="list-group-item">WHEN ${when}</li>
-        <li class="list-group-item">THEN ${then}</li>
-      </ul>
-
+        <li class="list-group-item">${question}</li>
       <br>
 
       <h3><a id="resources">RESOURCES</h3>
       <ul class="list-group">
-        <li class="list-group-item">GIVEN ${given}</li>
-        <li class="list-group-item">WHEN ${when}</li>
-        <li class="list-group-item">THEN ${then}</li>
+        <li class="list-group-item">${resourceName}</li>
+        <li class="list-group-item"><a href="${resourceURL}"></li>
       </ul>
 
       <br>
       
       <h3><a id="contactMe">CONTACT ME</h3>
       <ul class="list-group">
-        <li class="list-group-item">GitHub Username: ${userName}</li>
-        <li class="list-group-item">GitHub URL: ${url}</li>
-        <li class="list-group-item">LinkedIn: ${linkedIn}</li>
+        <li class="list-group-item">GitHub: ${userName}: <a href="${gitURL}"></li>
+        <li class="list-group-item">LinkedIn: <a href="${linkedIn}"></li>
         <li class="list-group-item">E-Mail: ${eMail}</li>
-      </ul>
-
-      <br>
-
-      <h3><a id="collaborators">COLLABORATOR(S)</h3>
-      <ul class="list-group">
-        
       </ul>
 
       <br>
@@ -174,22 +165,87 @@ inquirer
         {
             type: 'input',
             name: 'given',
-            message: 'What is the Acceptance Criteria? [Given..., When..., Then...]',
+            message: 'What is the Acceptance Criteria? [Given..., When..., Then...] Part 1 of 3: Finish the "GIVEN" statement (DO NOT USE THE WORD "GIVEN" AT THE BEGINING OF YOUR STATEMENT)',
         },
         {
             type: 'input',
             name: 'when',
-            message: 'What is the Acceptance Criteria? [Given..., When..., Then...]',
+            message: 'What is the Acceptance Criteria? [Given..., When..., Then...] Part 2 of 3: Finish the "WHEN" statement (DO NOT USE THE WORD "WHEN" AT THE BEGINING OF YOUR STATEMENT)',
         },
         {
             type: 'input',
             name: 'then',
-            message: 'What is the Acceptance Criteria? [Given..., When..., Then...]',
+            message: 'What is the Acceptance Criteria? [Given..., When..., Then...] Part 3 of 3: Finish the "THEN" statement (DO NOT USE THE WORD "THEN" AT THE BEGINING OF YOUR STATEMENT)',
         },
         {
             type: 'input',
-            name: 'instructions',
+            name: 'steps',
             message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
+        },
+        {
+            type: 'input',
+            name: 'instrutions',
+            message: 'Provide instructions and examples for use. Include screenshots and/or "code example(s)" as needed.',
+        },
+        {
+            type: 'input',
+            name: 'collabName',
+            message: 'List the name of who you collaborated with. If none, enter "N/A"',
+        },
+        {
+            type: `input`,
+            name: `collabGitHub`,
+            message: `List the GitHub Profile Name of who you collaborated with. If none, enter "N/A"`
+        },
+        {
+            type: `input`,
+            name: `collabGitHubURL`,
+            message: `Copy/Paste the URL to the GitHub Profile of who you collaborated with`
+        },
+        {
+            type: `input`,
+            name: `license`,
+            message: `What kind of licensing do you want applied to your project?`
+        },
+        {
+            type: `input`,
+            name: `tests`,
+            message: `What tests do you have for this application?`
+        },
+        {
+            type: `input`,
+            name: `question`,
+            message: `What quetsions are there to ask?`
+        },
+        {
+            type: `input`,
+            name: `resourceName`,
+            message: `What resource(s) did you use to create your project? (Insert Name)`
+        },
+        {
+            type: `input`,
+            name: `resourceURL`,
+            message: `Copy/Paste URL of the resource used`
+        },
+        {
+            type: 'input',
+            name: 'userName',
+            message: 'Enter your GitHub Username.',
+        },
+        {
+            type: 'input',
+            name: 'gitURL',
+            message: 'Copy/Paste your GitHub Profile URL.',
+        },
+        {
+            type: 'input',
+            name: 'linkedIn',
+            message: 'Copy/Paste your LinkedIn URL.',
+        },
+        {
+            type: 'input',
+            name: 'eMail',
+            message: 'Enter your E-Mail address.',
         },
         {
             type: 'input',
@@ -206,46 +262,6 @@ inquirer
             name: 'problemSolved',
             message: 'What problem does this solve?',
         },
-        {
-            type: 'input',
-            name: 'userName',
-            message: 'Enter your GitHub Username.',
-        },
-        {
-            type: 'input',
-            name: 'url',
-            message: 'Enter your GitHub URL.',
-        },
-        {
-            type: 'input',
-            name: 'linkedIn',
-            message: 'Enter your LinkedIn URL.',
-        },
-        {
-            type: 'input',
-            name: 'eMail',
-            message: 'Enter your E-Mail address.',
-        },
-        {
-            type: 'input',
-            name: 'collabName',
-            message: 'List the name of who you collaborated with. If none, enter "N/A"',
-        },
-        {
-            type: `input`,
-            name: `collabGitHub`,
-            message: `List the GitHub Profile Name of who you collaborated with. If none, enter "N/A"`
-        },
-        {
-            type: `input`,
-            name: `resourceName`,
-            message: `What resource(s) did you use to create your project? (Insert Name)`
-        },
-        {
-            type: `input`,
-            name: `resourceURL`,
-            message: `Paste URL of the resource used`
-        }
     ])
     .then((answers) => {
         const htmlPageContent = generateHTML(answers);
