@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, given, when, then, userName, url, linkedIn, eMail, collabName, collabGitHub }) =>
+const generateHTML = ({ title, webAddress, description, img, instructions, as, iWant, soThat, given, when, then, userName, url, linkedIn, eMail, collabName, collabGitHub, resourceName, resourceURL }) =>
     `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,46 +14,105 @@ const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, 
   <header class="p-5 mb-4 header bg-light">
     <div class="container">
       <h1 class="display-4">${title}</h1>
-      <h3>Example heading <span class="badge bg-secondary">DESCRIPTION</span></h3>
-      <h2 class="webAddress">${webAddress}</h2>
+
+      <br>
+    
+      <h3>DESCRIPTION</span></h3>
       <p class="lead">${description}.</p>
+      <h5 class="webAddress">${webAddress}</h5>
 
-      <h3>Example heading <span class="badge bg-secondary">TABLE OF CONTENTS</span></h3>
-      <ul class="list-group">
-        <li class="list-group-item"><a id="usage">USAGE</a></li>
-        <li class="list-group-item">USER STORY</li>
-        <li class="list-group-item">ACEEPTANCE CRITERIA</li>
-        <li class="list-group-item">LICENSE</li>  
-        <li class="list-group-item">CONTRIBUTING</li> 
-        <li class="list-group-item">TESTS</li>
-        <li class="list-group-item">QUESTIONS</li>
-        <li class="list-group-item">RESOURCES</li>
-        <li class="list-group-item">CONTACT ME</li>
-        <li class="list-group-item">COLLABORATORS</li>
-      </ul>
+      <br>
 
-      <h3>Example heading <span class="badge bg-secondary"><a href="#usage">USAGE</a></span></h3>
       <p class="container">${img}</p>
-      <h3>Example heading <span class="badge bg-secondary">INSTALLATION</span></h3>
+
+      <br>
+
+      <h3>TABLE OF CONTENTS</span></h3>
       <ul class="list-group">
-        <li class="list-group-item">AS ${    }</li>
+        <li class="list-group-item"><a href="#userStory">USER STORY</li>
+        <li class="list-group-item"><a href="#usage">USAGE</a></li>
+        <li class="list-group-item"><a href="#acceptCrit">ACEEPTANCE CRITERIA</li>
+        <li class="list-group-item"><a href="#license">LICENSE</li>  
+        <li class="list-group-item"><a href="#contributing">CONTRIBUTING</li> 
+        <li class="list-group-item"><a href="#tests">TESTS</li>
+        <li class="list-group-item"><a href="#questions">QUESTIONS</li>
+        <li class="list-group-item"><a href="#resources">RESOURCES</li>
+        <li class="list-group-item"><a href="#contactMe">CONTACT ME</li>
       </ul>
 
-      <h3>Example heading <span class="badge bg-secondary">USER STORY</span></h3>
+      <br>
+
+      <h3><a id="userStory">USER STORY</h3>
       <ul class="list-group">
         <li class="list-group-item">AS ${as}</li>
         <li class="list-group-item">I WANT ${iWant}</li>
         <li class="list-group-item">SO THAT ${soThat}</li>
       </ul>
+      
+      <br>
 
-      <h3>Example heading <span class="badge bg-secondary">ACCEPTANCE CRITERIA</span></h3>
+      <h3><a id="acceptCrit">ACCEPTANCE CRITERIA</h3>
       <ul class="list-group">
         <li class="list-group-item">GIVEN ${given}</li>
         <li class="list-group-item">WHEN ${when}</li>
         <li class="list-group-item">THEN ${then}</li>
       </ul>
 
-      <h3>Example heading <span class="badge bg-secondary">CONTACT ME</span></h3>
+      <br>
+
+      <h3><a id="usage">USAGE</a></h3>
+      <h3>INSTALLATION</span></h3>
+      <ul class="list-group">
+        <li class="list-group-item">AS ${instructions}</li>
+      </ul>
+
+      <br>
+
+      <h3><a id="license">LICENSE</h3>
+      <ul class="list-group">
+        <li class="list-group-item">GIVEN ${given}</li>
+        <li class="list-group-item">WHEN ${when}</li>
+        <li class="list-group-item">THEN ${then}</li>
+      </ul>
+
+      <br>
+
+      <h3><a id="contributing">CONTRIBUTING</h3>
+      <ul class="list-group">
+        <li class="list-group-item">Collaborator Name: ${collabName}</li>
+        <li class="list-group-item">Collaborator GitHub: ${collabGitHub}</li>
+      </ul>
+
+      <br>
+
+      <h3><a id="tests">TESTS</h3>
+      <ul class="list-group">
+        <li class="list-group-item">GIVEN ${given}</li>
+        <li class="list-group-item">WHEN ${when}</li>
+        <li class="list-group-item">THEN ${then}</li>
+      </ul>
+
+      <br>
+
+      <h3><a id="questions">QUESTIONS</h3>
+      <ul class="list-group">
+        <li class="list-group-item">GIVEN ${given}</li>
+        <li class="list-group-item">WHEN ${when}</li>
+        <li class="list-group-item">THEN ${then}</li>
+      </ul>
+
+      <br>
+
+      <h3><a id="resources">RESOURCES</h3>
+      <ul class="list-group">
+        <li class="list-group-item">GIVEN ${given}</li>
+        <li class="list-group-item">WHEN ${when}</li>
+        <li class="list-group-item">THEN ${then}</li>
+      </ul>
+
+      <br>
+      
+      <h3><a id="contactMe">CONTACT ME</h3>
       <ul class="list-group">
         <li class="list-group-item">GitHub Username: ${userName}</li>
         <li class="list-group-item">GitHub URL: ${url}</li>
@@ -61,11 +120,15 @@ const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, 
         <li class="list-group-item">E-Mail: ${eMail}</li>
       </ul>
 
-      <h3>Example heading <span class="badge bg-secondary">COLLABORATOR(S)</span></h3>
+      <br>
+
+      <h3><a id="collaborators">COLLABORATOR(S)</h3>
       <ul class="list-group">
-        <li class="list-group-item">Collaborator Name: ${collabName}</li>
-        <li class="list-group-item">Collaborator GitHub: ${collabGitHub}</li>
+        
       </ul>
+
+      <br>
+
     </div>
   </header>
 </body>
@@ -86,7 +149,7 @@ inquirer
         {
             type: 'input',
             name: 'webAddress',
-            message: 'What is the web address to your site ? (copy and paste URL)',
+            message: 'What is the web address to your site? (copy/paste URL)',
         },
         {
             type: 'input',
@@ -96,17 +159,37 @@ inquirer
         {
             type: 'input',
             name: 'as',
-            message: 'Creating your User Story: What is your User Story? (1 - AS..., 2 - I WANT..., 3 - SO THAT...) Part 1 of 3: Finish the "AS" statement (DO NOT USE THE WORD "AS" AT THE BEGINING OF YOUR STATEMENT',
+            message: 'Creating your User Story: What is your User Story? [1 - AS..., 2 - I WANT..., 3 - SO THAT...] Part 1 of 3: Finish the "AS" statement (DO NOT USE THE WORD "AS" AT THE BEGINING OF YOUR STATEMENT)',
         },
         {
             type: 'input',
             name: 'iWant',
-            message: 'Creating your User Story: What is your User Story? (1 - AS..., 2 - I WANT..., 3 - SO THAT...) Part 2 of 3: Finish the "I WANT" statement (DO NOT USE THE WORDS "I WANT" AT THE BEGINING OF YOUR STATEMENT',
+            message: 'Creating your User Story: What is your User Story? [1 - AS..., 2 - I WANT..., 3 - SO THAT...] Part 2 of 3: Finish the "I WANT" statement (DO NOT USE THE WORDS "I WANT" AT THE BEGINING OF YOUR STATEMENT)',
         },
         {
             type: 'input',
             name: 'soThat',
-            message: 'Creating your User Story: What is your User Story? (1 - AS..., 2 - I WANT..., 3 - SO THAT...) Part 3 of 3: Finish the "SO THAT" statement (DO NOT USE THE WORDS "SO THAT" AT THE BEGINING OF YOUR STATEMENT',
+            message: 'Creating your User Story: What is your User Story? [1 - AS..., 2 - I WANT..., 3 - SO THAT...] Part 3 of 3: Finish the "SO THAT" statement (DO NOT USE THE WORDS "SO THAT" AT THE BEGINING OF YOUR STATEMENT)',
+        },
+        {
+            type: 'input',
+            name: 'given',
+            message: 'What is the Acceptance Criteria? [Given..., When..., Then...]',
+        },
+        {
+            type: 'input',
+            name: 'when',
+            message: 'What is the Acceptance Criteria? [Given..., When..., Then...]',
+        },
+        {
+            type: 'input',
+            name: 'then',
+            message: 'What is the Acceptance Criteria? [Given..., When..., Then...]',
+        },
+        {
+            type: 'input',
+            name: 'instructions',
+            message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
         },
         {
             type: 'input',
@@ -122,11 +205,6 @@ inquirer
             type: 'input',
             name: 'problemSolved',
             message: 'What problem does this solve?',
-        },
-        {
-            type: 'input',
-            name: 'acceptanceCriteria',
-            message: 'What is the Acceptance Criteria? (Given..., When..., Then...)',
         },
         {
             type: 'input',
@@ -157,6 +235,16 @@ inquirer
             type: `input`,
             name: `collabGitHub`,
             message: `List the GitHub Profile Name of who you collaborated with. If none, enter "N/A"`
+        },
+        {
+            type: `input`,
+            name: `resourceName`,
+            message: `What resource(s) did you use to create your project? (Insert Name)`
+        },
+        {
+            type: `input`,
+            name: `resourceURL`,
+            message: `Paste URL of the resource used`
         }
     ])
     .then((answers) => {
