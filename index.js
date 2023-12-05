@@ -19,11 +19,11 @@ const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, 
     
       <h3>DESCRIPTION</span></h3>
       <p class="lead">${description}.</p>
-      <h5 class="webAddress"><a href="${webAddress}">${webAddress}</a></h5>
+      <h6 class="webAddress"><a href="${webAddress}">${webAddress}</a></h6>
 
       <br>
 
-      <p class="container">${img}</p>
+      <img class="container">${img}</img>
 
       <br>
 
@@ -108,7 +108,7 @@ const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, 
 
       <br>
       
-      <h3><a id="contactMe">CONTACT ME</h3>
+      <h3><a id="contactMe">CONTACT</h3>
       <ul class="list-group">
         <li class="list-group-item">GitHub: <a href="${gitURL}">${userName}</a></li>
         <li class="list-group-item">LinkedIn: <a href="${linkedIn}">${linkedInName}</a></li>
@@ -132,7 +132,7 @@ inquirer
         {
             type: 'input',
             name: 'description',
-            message: 'Give a brief description of your REPO',
+            message: 'Give a brief description of your REPO. Ideas for description: What was your motivation? Why did you build this REPO? What problem(s), if any, did it solve? What did you learn?',
         },
         {
             type: 'input',
@@ -248,21 +248,6 @@ inquirer
             type: 'input',
             name: 'eMail',
             message: 'Enter your E-Mail address.',
-        },
-        {
-            type: 'input',
-            name: 'motive',
-            message: 'What was your motivation?',
-        },
-        {
-            type: 'input',
-            name: 'reason',
-            message: 'Why did you build this project?',
-        },
-        {
-            type: 'input',
-            name: 'problemSolved',
-            message: 'What problem does this solve?',
         },
     ])
     .then((answers) => {
