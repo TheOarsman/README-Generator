@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, given, when, then, steps, userName, instructions, collabName, collabGitHub,, collabGitHubURL, license, tests, question, resourceName, resourceURL, userName, gitURL, linkedIn, eMail }) =>
+const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, given, when, then, steps, instructions, collabName, collabGitHub, collabGitHubURL, license, tests, question, resourceName, resourceURL, userName, gitURL, linkedIn, linkedInName, eMail }) =>
     `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +19,7 @@ const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, 
     
       <h3>DESCRIPTION</span></h3>
       <p class="lead">${description}.</p>
-      <h5 class="webAddress"><a href="${webAddress}"</a></h5>
+      <h5 class="webAddress"><a href="${webAddress}">${webAddress}</a></h5>
 
       <br>
 
@@ -45,18 +45,18 @@ const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, 
 
       <h3><a id="userStory">USER STORY</h3>
       <ul class="list-group">
-        <li class="list-group-item">AS ${as}</li>
-        <li class="list-group-item">I WANT ${iWant}</li>
-        <li class="list-group-item">SO THAT ${soThat}</li>
+        <li class="list-group-item"><b>AS</b> ${as}</li>
+        <li class="list-group-item"><b>I WANT</b> ${iWant}</li>
+        <li class="list-group-item"><b>SO THAT</b> ${soThat}</li>
       </ul>
       
       <br>
 
       <h3><a id="acceptCrit">ACCEPTANCE CRITERIA</h3>
       <ul class="list-group">
-        <li class="list-group-item">GIVEN ${given}</li>
-        <li class="list-group-item">WHEN ${when}</li>
-        <li class="list-group-item">THEN ${then}</li>
+        <li class="list-group-item"><b>GIVEN</b> ${given}</li>
+        <li class="list-group-item"><b>WHEN</b> ${when}</li>
+        <li class="list-group-item"><b>THEN</b> ${then}</li>
       </ul>
 
       <br>
@@ -69,7 +69,6 @@ const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, 
       <br>
 
       <h3><a id="usage">USAGE</a></h3>
-      <h3>INSTALLATION</span></h3>
       <ul class="list-group">
         <li class="list-group-item">${instructions}</li>
       </ul>
@@ -79,7 +78,7 @@ const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, 
       <h3><a id="contributing">CONTRIBUTING</h3>
       <ul class="list-group">
         <li class="list-group-item">Collaborator Name: ${collabName}</li>
-        <li class="list-group-item">Collaborator GitHub: ${collabGitHub}: <a href="${collabGitHubURL}"></a></li>
+        <li class="list-group-item">Collaborator GitHub: ${collabGitHub}: <a href="${collabGitHubURL}"></li>
       </ul>
 
       <br>
@@ -105,16 +104,14 @@ const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, 
 
       <h3><a id="resources">RESOURCES</h3>
       <ul class="list-group">
-        <li class="list-group-item">${resourceName}</li>
-        <li class="list-group-item"><a href="${resourceURL}"></a></li>
-      </ul>
+        <li class="list-group-item">${resourceName}: <a href="${resourceURL}">${resourceURL}</a></li>
 
       <br>
       
       <h3><a id="contactMe">CONTACT ME</h3>
       <ul class="list-group">
-        <li class="list-group-item">GitHub: ${userName}: <a href="${gitURL}"></a></li>
-        <li class="list-group-item">LinkedIn: <a href="${linkedIn}"></a></li>
+        <li class="list-group-item">GitHub: <a href="${gitURL}">${userName}</a></li>
+        <li class="list-group-item">LinkedIn: <a href="${linkedIn}">${linkedInName}</a></li>
         <li class="list-group-item">E-Mail: <a href=mailto:"${eMail}">${eMail}</a></li>
       </ul>
 
@@ -184,7 +181,7 @@ inquirer
         },
         {
             type: 'input',
-            name: 'instrutions',
+            name: 'instructions',
             message: 'Provide instructions and examples for use. Include screenshots and/or "code example(s)" as needed.',
         },
         {
@@ -195,37 +192,37 @@ inquirer
         {
             type: `input`,
             name: `collabGitHub`,
-            message: `List the GitHub Profile Name of who you collaborated with. If none, enter "N/A"`
+            message: `List the GitHub Profile Name of who you collaborated with. If none, enter "N/A"`,
         },
         {
             type: `input`,
             name: `collabGitHubURL`,
-            message: `Copy/Paste the URL to the GitHub Profile of who you collaborated with`
+            message: `Copy/Paste the URL to the GitHub Profile of who you collaborated with`,
         },
         {
             type: `input`,
             name: `license`,
-            message: `What kind of licensing do you want applied to your project?`
+            message: `What kind of licensing do you want applied to your project?`,
         },
         {
             type: `input`,
             name: `tests`,
-            message: `What tests do you have for this application?`
+            message: `What tests do you have for this application?`,
         },
         {
             type: `input`,
             name: `question`,
-            message: `What quetsions are there to ask?`
+            message: `What quetsions are there to ask?`,
         },
         {
             type: `input`,
             name: `resourceName`,
-            message: `What resource(s) did you use to create your project? (Insert Name)`
+            message: `What resource(s) did you use to create your project? (Insert Name)`,
         },
         {
             type: `input`,
             name: `resourceURL`,
-            message: `Copy/Paste URL of the resource used`
+            message: `Copy/Paste URL of the resource used`,
         },
         {
             type: 'input',
@@ -241,6 +238,11 @@ inquirer
             type: 'input',
             name: 'linkedIn',
             message: 'Copy/Paste your LinkedIn URL.',
+        },
+        {
+            type: `input`,
+            name: `linkedInName`,
+            message: `What is your display name on LinkedIn?`
         },
         {
             type: 'input',
