@@ -19,7 +19,7 @@ const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, 
     
       <h3>DESCRIPTION</span></h3>
       <p class="lead">${description}.</p>
-      <h5 class="webAddress">${webAddress}</h5>
+      <h5 class="webAddress"><a href="${webAddress}"</a></h5>
 
       <br>
 
@@ -79,7 +79,7 @@ const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, 
       <h3><a id="contributing">CONTRIBUTING</h3>
       <ul class="list-group">
         <li class="list-group-item">Collaborator Name: ${collabName}</li>
-        <li class="list-group-item">Collaborator GitHub: ${collabGitHub}: <a href="${collabGitHubURL}"></li>
+        <li class="list-group-item">Collaborator GitHub: ${collabGitHub}: <a href="${collabGitHubURL}"></a></li>
       </ul>
 
       <br>
@@ -106,16 +106,16 @@ const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, 
       <h3><a id="resources">RESOURCES</h3>
       <ul class="list-group">
         <li class="list-group-item">${resourceName}</li>
-        <li class="list-group-item"><a href="${resourceURL}"></li>
+        <li class="list-group-item"><a href="${resourceURL}"></a></li>
       </ul>
 
       <br>
       
       <h3><a id="contactMe">CONTACT ME</h3>
       <ul class="list-group">
-        <li class="list-group-item">GitHub: ${userName}: <a href="${gitURL}"></li>
-        <li class="list-group-item">LinkedIn: <a href="${linkedIn}"></li>
-        <li class="list-group-item">E-Mail: ${eMail}</li>
+        <li class="list-group-item">GitHub: ${userName}: <a href="${gitURL}"></a></li>
+        <li class="list-group-item">LinkedIn: <a href="${linkedIn}"></a></li>
+        <li class="list-group-item">E-Mail: <a href=mailto:"${eMail}">${eMail}</a></li>
       </ul>
 
       <br>
