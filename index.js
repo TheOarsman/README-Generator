@@ -14,21 +14,45 @@ const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, 
   <header class="p-5 mb-4 header bg-light">
     <div class="container">
       <h1 class="display-4">${title}</h1>
-      <p class="lead">${description}.</p>
+      <h3>Example heading <span class="badge bg-secondary">DESCRIPTION</span></h3>
       <h2 class="webAddress">${webAddress}</h2>
+      <p class="lead">${description}.</p>
+
+      <h3>Example heading <span class="badge bg-secondary">TABLE OF CONTENTS</span></h3>
+      <ul class="list-group">
+        <li class="list-group-item"><a id="usage">USAGE</a></li>
+        <li class="list-group-item">USER STORY</li>
+        <li class="list-group-item">ACEEPTANCE CRITERIA</li>
+        <li class="list-group-item">LICENSE</li>  
+        <li class="list-group-item">CONTRIBUTING</li> 
+        <li class="list-group-item">TESTS</li>
+        <li class="list-group-item">QUESTIONS</li>
+        <li class="list-group-item">RESOURCES</li>
+        <li class="list-group-item">CONTACT ME</li>
+        <li class="list-group-item">COLLABORATORS</li>
+      </ul>
+
+      <h3>Example heading <span class="badge bg-secondary"><a href="#usage">USAGE</a></span></h3>
       <p class="container">${img}</p>
+      <h3>Example heading <span class="badge bg-secondary">INSTALLATION</span></h3>
+      <ul class="list-group">
+        <li class="list-group-item">AS ${    }</li>
+      </ul>
+
       <h3>Example heading <span class="badge bg-secondary">USER STORY</span></h3>
       <ul class="list-group">
         <li class="list-group-item">AS ${as}</li>
         <li class="list-group-item">I WANT ${iWant}</li>
         <li class="list-group-item">SO THAT ${soThat}</li>
       </ul>
+
       <h3>Example heading <span class="badge bg-secondary">ACCEPTANCE CRITERIA</span></h3>
       <ul class="list-group">
         <li class="list-group-item">GIVEN ${given}</li>
         <li class="list-group-item">WHEN ${when}</li>
         <li class="list-group-item">THEN ${then}</li>
       </ul>
+
       <h3>Example heading <span class="badge bg-secondary">CONTACT ME</span></h3>
       <ul class="list-group">
         <li class="list-group-item">GitHub Username: ${userName}</li>
@@ -36,6 +60,7 @@ const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, 
         <li class="list-group-item">LinkedIn: ${linkedIn}</li>
         <li class="list-group-item">E-Mail: ${eMail}</li>
       </ul>
+
       <h3>Example heading <span class="badge bg-secondary">COLLABORATOR(S)</span></h3>
       <ul class="list-group">
         <li class="list-group-item">Collaborator Name: ${collabName}</li>
