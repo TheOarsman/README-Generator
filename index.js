@@ -1,7 +1,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generate = require('./utils/generateMarkdown.js');
+const path = require('path');
 
-const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, given, when, then, steps, instructions, collabName, collabGitHub, collabGitHubURL, license, tests, question, resourceName, resourceURL, userName, gitURL, linkedIn, linkedInName, eMail }) =>
+const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, given, when, then, steps, instructions, collabName, collabGitHub, collabGitHubURL, first, last, license, tests, question, resourceName, resourceURL, userName, gitURL, linkedIn, linkedInName, eMail }) =>
     `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,7 +87,7 @@ const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, 
 
       <h3><a id="license">LICENSE</h3>
       <ul class="list-group">
-        <li class="list-group-item">${license}</li>
+        <li class="list-group-item">Copyright (c) ${first} ${last} (GitHub: <a href="${gitURL}">${userName}</a>) Licensed under the ${license} license.</li>
       </ul>
 
       <br>
@@ -200,10 +202,20 @@ inquirer
             message: `Copy/Paste the URL to the GitHub Profile of who you collaborated with`,
         },
         {
+            type: `input`,
+            name: `first`,
+            message: `Enter your First name as you would like displayed for copyright/licensing`,
+        },
+        {
+            type: `input`,
+            name: `last`,
+            message: `Enter your Last name as you would like displayed for copyright/licensing`,
+        },
+        {
             type: `rawlist`,
             name: `license`,
             message: `What kind of licensing do you want applied to your project? NOTE: Use the Up/Down arrows to navigate through the list, type the number option then press "Enter", or highlight your selection and press "Enter", to select your choice.`,
-            choices: [`AFL-3.0`, `Apache-2.0`, `Artistic-2.0`, `BSL-1.0`, `BSD-2-Clause`, `BSD-3-Clause`, `BSD-3-Clause-Clear`, `BSD-4-Clause`, `0BSD`, `CC`, `CC0-1.0`, `CC-BY-4.0`, `CC-BY-SA-4.0`, `WTFPL`, `ECL-2.0`, `EPL-1.0`, `EPL-2.0`, `EUPL-1.1`, `AGPL-3.0`, `GPL`, `GPL-2.0`, `GPL-3.0`, `LGPL`, `LGPL-2.1`, `LGPL-3.0`, `ISC`, `LPPL-1.3c`, `MS-PL`, `MIT`, `MPL-2.0`, `OSL-3.0`, `PostgreSQL`, `OFL-1.1`, `NCSA`, `Unlicense`, `Zlib`],
+            choices: [`Apache 2.0 License`, `BSD 3-Clause License`, `BSD 2-Clause License`, `Attribution 4.0 International`, `Attribution-ShareAlike 4.0 International`, `Attribution-NonCommercial 4.0 International`, `Attribution-NoDerivates 4.0 International`, `Attribution-NonCommmercial-ShareAlike 4.0 International`, `Attribution-NonCommercial-NoDerivatives 4.0 International`, `Eclipse Public License 1.0`, `GNU GPL v3`, `GNU GPL v2`, `GNU AGPL v3`, `GNU LGPL v3`, `GNU FDL v1.3`, `IBM Public License Version 1.0`, `The MIT License`, `Mozilla Public License 2.0`, `Attribution License (BY)`, `Open Database License (ODbL)`, `Public Domain Dedication and License (PDDL)`, `The Perl License`, `The Artistic License 2.0`, `The zlib/libpng License`],
         },
         {
             type: `input`,
