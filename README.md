@@ -36,3 +36,4 @@
 
 
 [Anchor Links](https://blog.hubspot.com/marketing/jump-link-same-page)
+[Making Lists w/ Inquirer.js](https://www.digitalocean.com/community/tutorials/nodejs-interactive-command-line-prompts)
