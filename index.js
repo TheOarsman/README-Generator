@@ -1,9 +1,11 @@
+function init() { 
+
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generate = require('./utils/generateMarkdown.js');
 const path = require('path');
 
-const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, given, when, then, steps, instructions, collabName, collabGitHub, collabGitHubURL, first, last, license, tests, question, resourceName, resourceURL, userName, gitURL, linkedIn, linkedInName, eMail }) =>
+const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, given, when, then, steps, instructions, collabName, collabGitHub, collabGitHubURL, first, last, license, tests, question, resourceName, resourceURL, userName, gitURL, linkedIn, linkedInName, eMail, licenseBadge }) =>
     `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,7 +89,7 @@ const generateHTML = ({ title, description, webAddress, img, as, iWant, soThat, 
 
       <h3><a id="license">LICENSE</h3>
       <ul class="list-group">
-        <li class="list-group-item">Copyright (c) ${first} ${last} (GitHub: <a href="${gitURL}">${userName}</a>) Licensed under the ${license} license.</li>
+        <li class="list-group-item">Copyright (c) ${first} ${last} (GitHub: <a href="${gitURL}">${userName}</a>) Licensed under the ${license} license. ${licenseBadge}</li>
       </ul>
 
       <br>
@@ -270,18 +272,10 @@ inquirer
             err ? console.log(err) : console.log('Successfully created index.html!')
         );
     });
-
-
-// TODO: Include packages needed for this application
-
-// TODO: Create an array of questions for user input
-const questions = [];
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
-
-// TODO: Create a function to initialize app
-function init() { }
+}
 
 // Function call to initialize app
 init();
+
+// TODO: Create a function to write README file
+// function writeToFile(fileName, data) { }

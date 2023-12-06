@@ -1,6 +1,5 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) { }
 
 function licenseBadge(data) {
   const licenseType = data.license[0];
@@ -78,21 +77,19 @@ function licenseBadge(data) {
     licenseString = `![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)`
   };
   return licenseString
-}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) { }
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) { }
+};
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
-`;
-}
+  ${licenseBadge(data)}
+`}
+
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
 
 module.exports = generateMarkdown;
