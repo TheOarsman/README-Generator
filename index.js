@@ -180,16 +180,16 @@ ${description}
 
 ### USER STORY
    
-  AS</b> ${as}</li>
-  I WANT</b> ${iWant}</li>
-  SO THAT</b> ${soThat}</li>
+AS</b> ${as}</li>
+I WANT</b> ${iWant}</li>
+SO THAT</b> ${soThat}</li>
 
 
 ### ACCEPTANCE CRITERIA</h3>
 
-  GIVEN</b> ${given}</li>
-  WHEN</b> ${when}</li>
-  THEN</b> ${then}</li>
+GIVEN</b> ${given}</li>
+WHEN</b> ${when}</li>
+THEN</b> ${then}</li>
 
 ### INTALLATION
       
@@ -205,45 +205,27 @@ Collaborator Name: ${collabName}</li>
 Collaborator GitHub: ${collabGitHub}: <a href="${collabGitHubURL}"></li>
  
 
-      <br>
+### LICENSE
 
-      <h3><a id="license">LICENSE</h3>
-      <ul class="list-group">
-        <li class="list-group-item">Copyright (c) ${first} ${last} (GitHub: <a href="${gitURL}">${userName}</a>) Licensed under the ${license} license. ${licenseBadge}</li>
-      </ul>
+Copyright (c) ${first} ${last} (GitHub: [${gitURL}](${userName}) Licensed under the ${license} license. ${licenseBadge}
 
-      <br>
+### TESTS
 
-      <h3><a id="tests">TESTS</h3>
-      <ul class="list-group">
-        <li class="list-group-item">${tests}</li>
-      </ul>
+${tests}
 
-      <br>
+### QUESTIONS
 
-      <h3><a id="questions">QUESTIONS</h3>
-      <ul class="list-group">
-        <li class="list-group-item">${question}</li>
-      <br>
+${question}
 
-      <h3><a id="resources">RESOURCES</h3>
-      <ul class="list-group">
-        <li class="list-group-item">${resourceName}: <a href="${resourceURL}">${resourceURL}</a></li>
+### RESOURCES
 
-      <br>
-      
-      <h3><a id="contactMe">CONTACT</h3>
-      <ul class="list-group">
-        <li class="list-group-item">GitHub: <a href="${gitURL}">${userName}</a></li>
-        <li class="list-group-item">LinkedIn: <a href="${linkedIn}">${linkedInName}</a></li>
-        <li class="list-group-item">E-Mail: <a href=mailto:"${eMail}">${eMail}</a></li>
-      </ul>
+${resourceName}: [${resourceURL}](${resourceURL})
 
-      <br>
+### CONTACT
 
-    </div>
-  </header>
-</body>
-</html>`;
+GitHub: [${gitURL}](${userName})
+LinkedIn: [${linkedIn}](${linkedInName})
+E-Mail: [${eMail}](${eMail})
+`
 
 init();
