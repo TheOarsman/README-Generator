@@ -161,7 +161,7 @@ const generateREADME = ({ title, description, webAddress, img, as, iWant, soThat
 
 ${description}
 
-####### [${webAddress}](${webAddress})
+##### [${webAddress}](${webAddress})
 
 <img class="container">${img}</img>
 
@@ -178,20 +178,19 @@ ${description}
  9. [RESOURCES](#resources)
  10. [CONTACT ME](#contactMe)
 
-### USER STORY
+## USER STORY
    
-AS</b> ${as}</li>
-I WANT</b> ${iWant}</li>
-SO THAT</b> ${soThat}</li>
+AS ${as}
+I WANT ${iWant}
+SO THAT ${soThat}
 
-
-### ACCEPTANCE CRITERIA</h3>
+## ACCEPTANCE CRITERIA</h3>
 
 GIVEN</b> ${given}</li>
 WHEN</b> ${when}</li>
 THEN</b> ${then}</li>
 
-### INTALLATION
+## INTALLATION
       
 ${steps}
 
@@ -199,29 +198,28 @@ ${steps}
 
 ${instructions}
    
-### CONTRIBUTING</h3>
+## CONTRIBUTING</h3>
 
 Collaborator Name: ${collabName}</li>
 Collaborator GitHub: ${collabGitHub}: <a href="${collabGitHubURL}"></li>
- 
 
-### LICENSE
+## LICENSE
 
 Copyright (c) ${first} ${last} (GitHub: [${gitURL}](${userName}) Licensed under the ${license} license. ${licenseBadge}
 
-### TESTS
+## TESTS
 
 ${tests}
 
-### QUESTIONS
+## QUESTIONS
 
 ${question}
 
-### RESOURCES
+## RESOURCES
 
 ${resourceName}: [${resourceURL}](${resourceURL})
 
-### CONTACT
+## CONTACT
 
 GitHub: [${gitURL}](${userName})
 LinkedIn: [${linkedIn}](${linkedInName})
