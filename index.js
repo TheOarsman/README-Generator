@@ -93,7 +93,7 @@ function init() {
             },
             {
                 type: `rawlist`,
-                name: `license`,
+                name: `liceChoice`,
                 message: `What kind of licensing do you want applied to your project? NOTE: Use the Up/Down arrows to navigate through the list, type the number option then press "Enter", or highlight your selection and press "Enter", to select your choice.`,
                 choices: [`Apache 2.0 License`, `BSD 3-Clause License`, `BSD 2-Clause License`, `Attribution 4.0 International`, `Attribution-ShareAlike 4.0 International`, `Attribution-NonCommercial 4.0 International`, `Attribution-NoDerivates 4.0 International`, `Attribution-NonCommmercial-ShareAlike 4.0 International`, `Attribution-NonCommercial-NoDerivatives 4.0 International`, `Eclipse Public License 1.0`, `GNU GPL v3`, `GNU GPL v2`, `GNU AGPL v3`, `GNU LGPL v3`, `GNU FDL v1.3`, `IBM Public License Version 1.0`, `The MIT License`, `Mozilla Public License 2.0`, `Attribution License (BY)`, `Open Database License (ODbL)`, `Public Domain Dedication and License (PDDL)`, `The Perl License`, `The Artistic License 2.0`, `The zlib/libpng License`],
             },
@@ -153,7 +153,7 @@ function init() {
 }
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) { }
-const generateREADME = ({ title, description, webAddress, img, as, iWant, soThat, given, when, then, steps, instructions, collabName, collabGitHub, collabGitHubURL, first, last, license, tests, question, resourceName, resourceURL, userName, gitURL, linkedIn, linkedInName, eMail, licenseBadge }) =>
+const generateREADME = ({ title, description, webAddress, img, as, iWant, soThat, given, when, then, steps, instructions, collabName, collabGitHub, collabGitHubURL, first, last, liceChoice, tests, question, resourceName, resourceURL, userName, gitURL, linkedIn, linkedInName, eMail }) =>
 `
 # ${title}
 
@@ -167,8 +167,8 @@ ${description}
 
 ## TABLE OF CONTENTS
 
- 1. [USER STORY](#userStory)
- 2. [ACEEPTANCE CRITERIA](#acceptCrit)
+ 1. [USER-STORY](#user-story)
+ 2. [ACCEPTANCE-CRITERIA](#acceptance-criteria)
  3. [INSTALLATION](#installation)
  4. [USAGE](#usage)
  5. [LICENSE](#license)  
@@ -176,36 +176,40 @@ ${description}
  7. [TESTS](#tests)
  8. [QUESTIONS](#questions)
  9. [RESOURCES](#resources)
- 10. [CONTACT ME](#contactMe)
+ 10. [CONTACT](#contact)
 
-## USER STORY
+## USER-STORY
    
 AS ${as}
+
 I WANT ${iWant}
+
 SO THAT ${soThat}
 
-## ACCEPTANCE CRITERIA</h3>
+## ACCEPTANCE-CRITERIA
 
-GIVEN</b> ${given}</li>
-WHEN</b> ${when}</li>
-THEN</b> ${then}</li>
+GIVEN ${given}
 
-## INTALLATION
+WHEN ${when}
+
+THEN ${then}
+
+## INSTALLATION
       
 ${steps}
 
-### USAGE
+## USAGE
 
 ${instructions}
    
-## CONTRIBUTING</h3>
+## CONTRIBUTING
 
-Collaborator Name: ${collabName}</li>
-Collaborator GitHub: ${collabGitHub}: <a href="${collabGitHubURL}"></li>
+Collaborator Name: ${collabName}
+Collaborator GitHub: [${collabGitHub}](${collabGitHubURL})
 
 ## LICENSE
 
-Copyright (c) ${first} ${last} (GitHub: [${gitURL}](${userName}) Licensed under the ${license} license. ${licenseBadge}
+Copyright (c) ${first} ${last}, GitHub: [${gitURL}](${userName}), Licensed under the ${liceChoice} license.
 
 ## TESTS
 
