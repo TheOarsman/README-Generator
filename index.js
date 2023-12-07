@@ -154,7 +154,7 @@ function init() {
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) { }
 const generateREADME = ({ title, description, webAddress, img, as, iWant, soThat, given, when, then, steps, instructions, collabName, collabGitHub, collabGitHubURL, first, last, liceChoice, tests, question, resourceName, resourceURL, userName, gitURL, linkedIn, linkedInName, eMail }) =>
-`
+    `
 # ${title}
 
 ### DESCRIPTION
