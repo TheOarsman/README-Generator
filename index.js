@@ -165,18 +165,18 @@ ${description}
 
 <img class="container">${img}</img>
 
-### TABLE OF CONTENTS
+## TABLE OF CONTENTS
 
-<a href="#userStory">USER STORY</li>
-<a href="#acceptCrit">ACEEPTANCE CRITERIA</li>
-<a href="#installation">INSTALLATION</li>
-<a href="#usage">USAGE</a></li>
-<a href="#license">LICENSE</li>  
-<a href="#contributing">CONTRIBUTING</li> 
-<a href="#tests">TESTS</li>
-<a href="#questions">QUESTIONS</li>
-<a href="#resources">RESOURCES</li>
-<a href="#contactMe">CONTACT ME</li>
+ 1. [USER STORY](#userStory)
+ 2. [ACEEPTANCE CRITERIA](#acceptCrit)
+ 3. [INSTALLATION](#installation)
+ 4. [USAGE](#usage)
+ 5. [LICENSE](#license)  
+ 6. [CONTRIBUTING](#contributing)
+ 7. [TESTS](#tests)
+ 8. [QUESTIONS](#questions)
+ 9. [RESOURCES](#resources)
+ 10. [CONTACT ME](#contactMe)
 
 ### USER STORY
    
