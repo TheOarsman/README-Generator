@@ -1,14 +1,15 @@
-const inquirer = require('inquirer');
-const fs = require('fs');
-const generate = require('./utils/generateMarkdown.js');
-const path = require('path');
-
 function init() {
+
+    const inquirer = require('inquirer');
+    const fs = require('fs');
+    const generate = require('./utils/generateMarkdown.js');
+    const path = require('path');
+
     inquirer
         .prompt([
             {
                 type: 'input',
-                name: 'title',
+                name: 'siteName',
                 message: 'What is the title of your Web Page?',
             },
             {
@@ -140,94 +141,12 @@ function init() {
             {
                 type: 'input',
                 name: 'eMail',
-                message: 'Enter your E-Mail address.',
+                message: 'Enter your E-Mail address.'
             },
         ])
-        .then((answers) => {
-            const markdownContent = generateREADME(answers);
-
-            fs.writeFile('example.md', markdownContent, (err) =>
-                err ? console.log(err) : console.log('Successfully created example.md')
-            );
+        .then((response) => {
+            return fs.writeFileSync(path.join (process.cwd(), "READMEtest.md"), generate(response));
         });
 }
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) { }
-const generateREADME = ({ title, description, webAddress, img, as, iWant, soThat, given, when, then, steps, instructions, collabName, collabGitHub, collabGitHubURL, first, last, liceChoice, tests, question, resourceName, resourceURL, userName, gitURL, linkedIn, linkedInName, eMail }) =>
-    `
-# ${title}
-
-### DESCRIPTION
-
-${description}
-
-##### [${webAddress}](${webAddress})
-
-<img class="container">${img}</img>
-
-## TABLE OF CONTENTS
-
- 1. [USER-STORY](#user-story)
- 2. [ACCEPTANCE-CRITERIA](#acceptance-criteria)
- 3. [INSTALLATION](#installation)
- 4. [USAGE](#usage)
- 5. [LICENSE](#license)  
- 6. [CONTRIBUTING](#contributing)
- 7. [TESTS](#tests)
- 8. [QUESTIONS](#questions)
- 9. [RESOURCES](#resources)
- 10. [CONTACT](#contact)
-
-## USER-STORY
-   
-AS ${as}
-
-I WANT ${iWant}
-
-SO THAT ${soThat}
-
-## ACCEPTANCE-CRITERIA
-
-GIVEN ${given}
-
-WHEN ${when}
-
-THEN ${then}
-
-## INSTALLATION
-      
-${steps}
-
-## USAGE
-
-${instructions}
-   
-## CONTRIBUTING
-
-Collaborator Name: ${collabName}
-Collaborator GitHub: [${collabGitHub}](${collabGitHubURL})
-
-## LICENSE
-
-Copyright (c) ${first} ${last}, GitHub: [${gitURL}](${userName}), Licensed under the ${liceChoice} license.
-
-## TESTS
-
-${tests}
-
-## QUESTIONS
-
-${question}
-
-## RESOURCES
-
-${resourceName}: [${resourceURL}](${resourceURL})
-
-## CONTACT
-
-GitHub: [${gitURL}](${userName})
-LinkedIn: [${linkedIn}](${linkedInName})
-E-Mail: [${eMail}](${eMail})
-`
 
 init();

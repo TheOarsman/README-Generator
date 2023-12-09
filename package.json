@@ -1,5 +1,5 @@
 {
-    "name": "static-site",
+    "name": "readme-generator-using-node.js-npm-inquirer",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -12,3 +12,5 @@
         "inquirer": "^8.2.6"
     }
 }
+
+
