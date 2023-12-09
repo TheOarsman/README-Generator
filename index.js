@@ -96,7 +96,7 @@ function init() {
                 type: `rawlist`,
                 name: `liceChoice`,
                 message: `What kind of licensing do you want applied to your project? NOTE: Use the Up/Down arrows to navigate through the list, type the number option then press "Enter", or highlight your selection and press "Enter", to select your choice.`,
-                choices: [`Apache 2.0 License`, `BSD 3-Clause License`, `BSD 2-Clause License`, `Attribution 4.0 International`, `Attribution-ShareAlike 4.0 International`, `Attribution-NonCommercial 4.0 International`, `Attribution-NoDerivates 4.0 International`, `Attribution-NonCommmercial-ShareAlike 4.0 International`, `Attribution-NonCommercial-NoDerivatives 4.0 International`, `Eclipse Public License 1.0`, `GNU GPL v3`, `GNU GPL v2`, `GNU AGPL v3`, `GNU LGPL v3`, `GNU FDL v1.3`, `IBM Public License Version 1.0`, `The MIT License`, `Mozilla Public License 2.0`, `Attribution License (BY)`, `Open Database License (ODbL)`, `Public Domain Dedication and License (PDDL)`, `The Perl License`, `The Artistic License 2.0`, `The zlib/libpng License`],
+                choices: [`GNU AGPLv3`, `GNU GPLv3`, `GNU LGPLv3`, `Mozilla Public License 2.0`, `Apache License 2.0`, `MIT License`, `Boost Software License 1.0`, `The Unlicense`],
             },
             {
                 type: `input`,
