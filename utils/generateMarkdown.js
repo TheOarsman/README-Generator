@@ -3,28 +3,28 @@ function licenseBadge(data) {
   const liceType = data.liceChoice[0];
   let licenseString = " "
   if (liceType === "GNU AGPLv3") {
-    licenseString = `[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)]`
+    licenseString = `![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)`
   };
   if (liceType === "GNU GPLv3") {
-    licenseString = `[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)]`
+    licenseString = `![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)`
   };
   if (liceType === "GNU LGPLv3") {
-    licenseString = `[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)]`
+    licenseString = `![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)`
   };
   if (liceType === "Mozilla Public License 2.0") {
-    licenseString = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)]`
+    licenseString = `![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)`
   };
   if (liceType === "Apache License 2.0") {
-    licenseString = `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]`
+    licenseString = `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`
   };
   if (liceType === "MIT License") {
-    licenseString = `[![License: MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)]`
+    licenseString = `![License: MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)`
   };
   if (liceType === "Boost Software License 1.0") {
-    licenseString = `[![License: ____](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)]`
+    licenseString = `![License: ____](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)`
   };
   if (liceType === "The Unlicense") {
-    licenseString = `[![License: ____](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)]`
+    licenseString = `![License: ____](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)`
   };
   return licenseString
 };
