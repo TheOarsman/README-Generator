@@ -1,4 +1,4 @@
-# README-Generator
+# README.md Generator   ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 ## Description
 A command-line application that dynamically generates a README.md file from a user's input using the [Inquierer Package](https://www.npmjs.com/package/inquirer/v/8.2.4).
 
@@ -6,12 +6,12 @@ A command-line application that dynamically generates a README.md file from a us
 
 ![Alt text](MRKDWN.jpg)
 
-## Table of Contents
-- [README-Generator](#readme-generator)
+## Tabel on Contents
+- [README.md Generator   ](#readmemd-generator---)
   - [Description](#description)
-  - [Table of Contents](#table-of-contents)
-  - [USER STORY](#user-story)
-  - [ACCEPTANCE CRITERIA](#acceptance-criteria)
+  - [Tabel on Contents](#tabel-on-contents)
+  - [User Story](#user-story)
+  - [Acceptance Criteria](#acceptance-criteria)
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#license)
@@ -21,12 +21,12 @@ A command-line application that dynamically generates a README.md file from a us
   - [Resources](#resources)
   - [Contact](#contact)
 
-## USER STORY
+## User Story
 **AS** a developer <br>
 **I WANT** a README generator <br>
 **SO THAT** I can quickly create a professional README for a project
 
-## ACCEPTANCE CRITERIA
+## Acceptance Criteria
 **GIVEN** a command-line application that accepts user input
 
 **WHEN** I am prompted for information about my application repository <br>
@@ -51,12 +51,31 @@ A command-line application that dynamically generates a README.md file from a us
 **THEN** I am taken to the corresponding section of the README
 
 ## Installation
+1) Clone reposityory from GitHub
+2) in the index.js file, on line 148, reaname "READMEtest.md" to "README.md"
+3) Open an integrated terminal for the "index.js" file
+4) Run "npm i" command to install all dependencies or devDependencies from the package. json file
+5) Run "node index.js" to begin running Js file
 
 ## Usage
 
+1) Verify installation steps have been completed
+2) Read promps carefully, and answer each thuroughly
+3) Once all promps have been answered a "README.md" file will be generated
+4) Copy/Paste new "README.md" file into your project
+
+generateMarkdown.js function for License Badges =
+  [function licenseBadge(data)](https://github.com/TheOarsman/README-Generator/blob/3eca79a8bfa63ae587d0ee5f459b5adc3a14d5e2/utils/generateMarkdown.js#L2-L24)
+
 ## License
+Copyright (c) Heinz Ulrich V
+
+GitHub: [TheOarsman](www.githubg.com/TheOarsman)
+
+![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 
 ## Contributing
+N/A
 
 ## Tests
 
