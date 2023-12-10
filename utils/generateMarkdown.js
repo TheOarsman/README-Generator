@@ -25,28 +25,28 @@ function licenseBadge(data) {
 
 
 function generateMarkdown(data) {
-  return `# ${data.siteName}
+  return `# ${data.siteName}  ${licenseBadge(data)}
 
-### DESCRIPTION
+## DESCRIPTION
 
 ${data.description}
 
-##### [${data.webAddress}](${data.webAddress})
+[${data.webAddress}](${data.webAddress})
 
 ${data.img}
 
 ## TABLE OF CONTENTS
 
- 1. [USER-STORY](#user-story)
- 2. [ACCEPTANCE-CRITERIA](#acceptance-criteria)
- 3. [INSTALLATION](#installation)
- 4. [USAGE](#usage)
- 5. [LICENSE](#license)  
- 6. [CONTRIBUTING](#contributing)
- 7. [TESTS](#tests)
- 8. [QUESTIONS](#questions)
- 9. [RESOURCES](#resources)
- 10. [CONTACT](#contact)
+1. [USER-STORY](#user-story)
+2. [ACCEPTANCE-CRITERIA](#acceptance-criteria)
+3. [INSTALLATION](#installation)
+4. [USAGE](#usage)
+5. [LICENSE](#license)  
+6. [CONTRIBUTING](#contributing)
+7. [TESTS](#tests)
+8. [QUESTIONS](#questions)
+9. [RESOURCES](#resources)
+10. [CONTACT](#contact)
 
 ## USER-STORY
    
@@ -74,12 +74,19 @@ ${data.instructions}
    
 ## CONTRIBUTING
 
-Collaborator Name: ${data.collabName}
-Collaborator GitHub: [${data.collabGitHub}](${data.collabGitHubURL})
+Collaborator: ${data.collabName}
+
+GitHub: [${data.collabGitHub}](${data.collabGitHubURL})
 
 ## LICENSE
 
-Copyright (c) ${data.first} ${data.last}, GitHub: [${data.gitURL}](${data.userName}), Licensed under ${data.liceChoice}. ${licenseBadge(data)}
+Copyright (c) ${data.first} ${data.last}
+
+GitHub: [${data.userName}](${data.gitURL})
+
+icensed under ${data.liceChoice}
+
+${licenseBadge(data)}
 
 ## TESTS
 
@@ -95,8 +102,10 @@ ${data.resourceName}: [${data.resourceURL}](${data.resourceURL})
 
 ## CONTACT
 
-GitHub: [${data.gitURL}](${data.userName})
-LinkedIn: [${data.linkedIn}](${data.linkedInName})
+GitHub: [${data.userName}](${data.gitURL})
+
+LinkedIn: [${data.linkedInName}](${data.linkedIn})
+
 E-Mail: [${data.eMail}](${data.eMail})`
 }
 
