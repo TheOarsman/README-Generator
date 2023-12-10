@@ -1,6 +1,6 @@
 
 function licenseBadge(data) {
-  const liceType = data.liceChoice[0];
+  const liceType = data.liceChoice;
   let licenseString = " "
   if (liceType === "GNU AGPLv3") {
     licenseString = `![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)`
@@ -19,12 +19,6 @@ function licenseBadge(data) {
   };
   if (liceType === "MIT License") {
     licenseString = `![License: MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)`
-  };
-  if (liceType === "Boost Software License 1.0") {
-    licenseString = `![License: ____](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)`
-  };
-  if (liceType === "The Unlicense") {
-    licenseString = `![License: ____](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)`
   };
   return licenseString
 };
