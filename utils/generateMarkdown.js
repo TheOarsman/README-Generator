@@ -102,6 +102,8 @@ ${data.resourceName}: [${data.resourceURL}](${data.resourceURL})
 
 ## CONTACT
 
+Developer: ${data.first} ${data.last}
+
 GitHub: [${data.userName}](${data.gitURL})
 
 LinkedIn: [${data.linkedInName}](${data.linkedIn})

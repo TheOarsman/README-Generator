@@ -1,16 +1,32 @@
 # README-Generator
-## A command-line application that dynamically generates a README.md file from a user's input using the [Inquierer Package](https://www.npmjs.com/package/inquirer/v/8.2.4).
+## Description
+A command-line application that dynamically generates a README.md file from a user's input using the [Inquierer Package](https://www.npmjs.com/package/inquirer/v/8.2.4).
 
 // Web Address to go here //
 
-// Screen shot of video to go here //
+![Alt text](MRKDWN.jpg)
 
-# USER STORY
+## Table of Contents
+- [README-Generator](#readme-generator)
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
+  - [USER STORY](#user-story)
+  - [ACCEPTANCE CRITERIA](#acceptance-criteria)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Quetsions](#quetsions)
+  - [Resources](#resources)
+  - [Contact](#contact)
+
+## USER STORY
 **AS** a developer <br>
 **I WANT** a README generator <br>
 **SO THAT** I can quickly create a professional README for a project
 
-# ACCEPTANCE CRITERIA
+## ACCEPTANCE CRITERIA
 **GIVEN** a command-line application that accepts user input
 
 **WHEN** I am prompted for information about my application repository <br>
@@ -34,7 +50,31 @@
 **WHEN** I click on the links in the Table of Contents <br>
 **THEN** I am taken to the corresponding section of the README
 
+## Installation
 
-[Anchor Links](https://blog.hubspot.com/marketing/jump-link-same-page)
+## Usage
+
+## License
+
+## Contributing
+
+## Tests
+
+## Quetsions
+
+## Resources
+
 [Making Lists w/ Inquirer.js](https://www.digitalocean.com/community/tutorials/nodejs-interactive-command-line-prompts)
+
 [Choose a License](https://choosealicense.com/licenses/)
+
+[GitHub Gist](https://gist.github.com/kofiav/c1059e1075b67582e86b07aa9759e20d)
+
+## Contact
+Developer: Heinz Ulrich V
+
+GitHub: [TheOarsman](https://www.github.com/TheOarsman)
+
+LinkedIn: [Heinz Ulrich V](https://www.linkedin.com/in/heinz-ulrich-v-3a3486a0/)
+
+E-Mail: [heinzulrichv@gmail.com](heinzulrichv@gmail.com)
