@@ -17,9 +17,8 @@ A command-line application that dynamically generates a README.md file from a us
   - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#tests)
-  - [Quetsions](#quetsions)
   - [Resources](#resources)
-  - [Contact](#contact)
+  - [Questions/Contact](#questionscontact)
 
 ## User Story
 **AS** a developer <br>
@@ -60,10 +59,13 @@ A command-line application that dynamically generates a README.md file from a us
 ## Usage
 
 1) Verify installation steps have been completed
-2) Read promps carefully, and answer each thuroughly
+2) Read promps carefully, and answer each thuroughly, pressing Enter after answering each prompt
 3) Once all promps have been answered a "README.md" file will be generated
 4) Copy/Paste new "README.md" file into your project
 
+
+* Here is the code used in the generateMarkdown.js file to generate License Badges
+  
 generateMarkdown.js function for License Badges =
   [function licenseBadge(data)](https://github.com/TheOarsman/README-Generator/blob/3eca79a8bfa63ae587d0ee5f459b5adc3a14d5e2/utils/generateMarkdown.js#L2-L24)
 
@@ -89,8 +91,6 @@ N/A
 
 ## Tests
 
-## Quetsions
-
 ## Resources
 
 [Making Lists w/ Inquirer.js](https://www.digitalocean.com/community/tutorials/nodejs-interactive-command-line-prompts)
@@ -99,7 +99,7 @@ N/A
 
 [GitHub Gist: Markdown License Badges](https://gist.github.com/kofiav/c1059e1075b67582e86b07aa9759e20d)
 
-## Contact
+## Questions/Contact
 Developer: Heinz Ulrich V
 
 GitHub: [TheOarsman](https://www.github.com/TheOarsman)

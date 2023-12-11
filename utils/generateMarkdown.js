@@ -27,7 +27,7 @@ function licenseBadge(data) {
 function generateMarkdown(data) {
   return `# ${data.siteName}  ${licenseBadge(data)}
 
-## DESCRIPTION
+## Description
 
 ${data.description}
 
@@ -35,7 +35,7 @@ ${data.description}
 
 ${data.img}
 
-## TABLE OF CONTENTS
+## Table of Contents
 
 1. [USER-STORY](#user-story)
 2. [ACCEPTANCE-CRITERIA](#acceptance-criteria)
@@ -44,11 +44,10 @@ ${data.img}
 5. [LICENSE](#license)  
 6. [CONTRIBUTING](#contributing)
 7. [TESTS](#tests)
-8. [QUESTIONS](#questions)
-9. [RESOURCES](#resources)
-10. [CONTACT](#contact)
+8. [RESOURCES](#resources)
+9. [QUESTIONS/CONTACT](#questions/contact)
 
-## USER-STORY
+## User-Story
    
 AS ${data.as}
 
@@ -56,7 +55,7 @@ I WANT ${data.iWant}
 
 SO THAT ${data.soThat}
 
-## ACCEPTANCE-CRITERIA
+## Acceptance-Criteria
 
 GIVEN ${data.given}
 
@@ -64,39 +63,35 @@ WHEN ${data.when}
 
 THEN ${data.then}
 
-## INSTALLATION
+## Installation
       
 ${data.steps}
 
-## USAGE
+## Usage
 
 ${data.instructions}
    
-## CONTRIBUTING
+## Contributing
 
 Collaborator: ${data.collabName}
 
 GitHub: [${data.collabGitHub}](${data.collabGitHubURL})
 
-## LICENSE
+## License
 
 ${licenseBadge(data)}
 
 Copyright (c) ${data.year} ${data.first} ${data.last}
 
-## TESTS
+## Tests
 
 ${data.tests}
 
-## QUESTIONS
-
-${data.question}
-
-## RESOURCES
+## Resources
 
 ${data.resourceName}: [${data.resourceURL}](${data.resourceURL})
 
-## CONTACT
+## Questions/Contact
 
 Developer: ${data.first} ${data.last}
 
