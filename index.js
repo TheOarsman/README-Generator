@@ -20,12 +20,12 @@ function init() {
             {
                 type: 'input',
                 name: 'webAddress',
-                message: 'Copy/Paste the URL to your site',
+                message: 'Copy/Paste the URL to your site (be sure to have "https://" at the start of the address)',
             },
             {
                 type: 'input',
                 name: 'img',
-                message: 'Paste an image of your web page.',
+                message: 'Insert an image/screenshot of your web page (NOTE: IMG should already be in your images folder, or somewhere already in your project. IMG should be JPG. Enter "![Alt text]" followed by the IMG file name as it is titled in your project)',
             },
             {
                 type: 'input',
@@ -60,12 +60,12 @@ function init() {
             {
                 type: 'input',
                 name: 'steps',
-                message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
+                message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running. (If you are making a numbered list, type "1.", type the step, then add "<br>" before going to the next step and number)',
             },
             {
                 type: 'input',
                 name: 'instructions',
-                message: 'Provide instructions and examples for use. Include screenshots and/or "code example(s)" as needed.',
+                message: 'Provide instructions and examples for use. Include screenshots and/or "code example(s)" as needed. (If you are making a numbered list, type "1.", type the step, then add "<br>" before going to the next step and number)',
             },
             {
                 type: 'input',
@@ -80,7 +80,7 @@ function init() {
             {
                 type: `input`,
                 name: `collabGitHubURL`,
-                message: `Copy/Paste the URL to the GitHub Profile of who you collaborated with`,
+                message: `Copy/Paste the URL to the GitHub Profile of who you collaborated with (be sure to have "https://" at the start of the address)`,
             },
             {
                 type: `rawlist`,
@@ -110,18 +110,13 @@ function init() {
             },
             {
                 type: `input`,
-                name: `question`,
-                message: `What quetsions are there to ask?`,
-            },
-            {
-                type: `input`,
                 name: `resourceName`,
-                message: `What resource(s) did you use to create your project? (Insert Name)`,
+                message: `What resource(s) did you use to create your project? (Insert WebPage Name)`,
             },
             {
                 type: `input`,
                 name: `resourceURL`,
-                message: `Copy/Paste URL of the resource used`,
+                message: `Copy/Paste URL of the resource used (be sure to have "https://" at the start of the address)`,
             },
             {
                 type: 'input',
@@ -131,12 +126,12 @@ function init() {
             {
                 type: 'input',
                 name: 'gitURL',
-                message: 'Copy/Paste your GitHub Profile URL.',
+                message: 'Copy/Paste your GitHub Profile URL (be sure to have "https://" at the start of the address)',
             },
             {
                 type: 'input',
                 name: 'linkedIn',
-                message: 'Copy/Paste your LinkedIn URL.',
+                message: 'Copy/Paste your LinkedIn URL (be sure to have "https://" at the start of the address)',
             },
             {
                 type: `input`,
