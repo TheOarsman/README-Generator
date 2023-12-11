@@ -45,7 +45,7 @@ ${data.img}
 6. [CONTRIBUTING](#contributing)
 7. [TESTS](#tests)
 8. [RESOURCES](#resources)
-9. [QUESTIONS/CONTACT](#questions/contact)
+9. [QUESTIONS/CONTACT](#questionscontact)
 
 ## User-Story
    
