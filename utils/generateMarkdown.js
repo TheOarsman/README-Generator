@@ -3,34 +3,22 @@ function licenseBadge(data) {
   const liceType = data.liceChoice;
   let licenseString = " "
   if (liceType === "GNU AGPLv3") {
-    licenseString = `![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)
-    
-    https://choosealicense.com/licenses/agpl-3.0/`
+    licenseString = `![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)`
   };
   if (liceType === "GNU GPLv3") {
-    licenseString = `![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
-    
-    https://choosealicense.com/licenses/gpl-3.0/`
+    licenseString = `![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)`
   };
   if (liceType === "GNU LGPLv3") {
-    licenseString = `![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)
-    
-    https://choosealicense.com/licenses/lgpl-3.0/`
+    licenseString = `![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)`
   };
   if (liceType === "Mozilla Public License 2.0") {
-    licenseString = `![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)
-    
-    https://choosealicense.com/licenses/mpl-2.0/`
+    licenseString = `![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)`
   };
   if (liceType === "Apache License 2.0") {
-    licenseString = `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
-    
-    https://choosealicense.com/licenses/apache-2.0/`
+    licenseString = `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`
   };
   if (liceType === "MIT License") {
-    licenseString = `![License: MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
-    
-    https://choosealicense.com/licenses/mit/`
+    licenseString = `![License: MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)`
   };
   return licenseString
 };
@@ -92,9 +80,9 @@ GitHub: [${data.collabGitHub}](${data.collabGitHubURL})
 
 ## LICENSE
 
-Copyright (c) ${data.first} ${data.last}
-
 ${licenseBadge(data)}
+
+Copyright (c) ${data.year} ${data.first} ${data.last}
 
 ## TESTS
 

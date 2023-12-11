@@ -83,6 +83,17 @@ function init() {
                 message: `Copy/Paste the URL to the GitHub Profile of who you collaborated with`,
             },
             {
+                type: `rawlist`,
+                name: `liceChoice`,
+                message: `What kind of licensing do you want applied to your project? NOTE: Use the Up/Down arrows to navigate through the list, type the number option then press "Enter", or highlight your selection and press "Enter", to select your choice.`,
+                choices: [`GNU AGPLv3`, `GNU GPLv3`, `GNU LGPLv3`, `Mozilla Public License 2.0`, `Apache License 2.0`, `MIT License`],
+            },
+            {
+                type: `input`,
+                name: `year`,
+                message: `Enter the curent, 4-digit, year for copyright/licensing`,
+            },
+            {
                 type: `input`,
                 name: `first`,
                 message: `Enter your First name as you would like displayed for copyright/licensing`,
@@ -91,12 +102,6 @@ function init() {
                 type: `input`,
                 name: `last`,
                 message: `Enter your Last name as you would like displayed for copyright/licensing`,
-            },
-            {
-                type: `rawlist`,
-                name: `liceChoice`,
-                message: `What kind of licensing do you want applied to your project? NOTE: Use the Up/Down arrows to navigate through the list, type the number option then press "Enter", or highlight your selection and press "Enter", to select your choice.`,
-                choices: [`GNU AGPLv3`, `GNU GPLv3`, `GNU LGPLv3`, `Mozilla Public License 2.0`, `Apache License 2.0`, `MIT License`],
             },
             {
                 type: `input`,
