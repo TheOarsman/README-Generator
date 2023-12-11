@@ -52,7 +52,7 @@ A command-line application that dynamically generates a README.md file from a us
 
 ## Installation
 1) Clone reposityory from GitHub
-2) in the index.js file, on line 148, reaname "READMEtest.md" to "README.md"
+2) In the index.js file, on line 148, reaname "READMEtest.md" to "README.md"
 3) Open an integrated terminal for the "index.js" file
 4) Run "npm i" command to install all dependencies or devDependencies from the package. json file
 5) Run "node index.js" to begin running Js file
@@ -68,11 +68,21 @@ generateMarkdown.js function for License Badges =
   [function licenseBadge(data)](https://github.com/TheOarsman/README-Generator/blob/3eca79a8bfa63ae587d0ee5f459b5adc3a14d5e2/utils/generateMarkdown.js#L2-L24)
 
 ## License
-Copyright (c) Heinz Ulrich V
-
-GitHub: [TheOarsman](www.githubg.com/TheOarsman)
-
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+
+   Copyright 2023 Heinz Ulrich V
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
 
 ## Contributing
 N/A
@@ -87,7 +97,7 @@ N/A
 
 [Choose a License](https://choosealicense.com/licenses/)
 
-[GitHub Gist](https://gist.github.com/kofiav/c1059e1075b67582e86b07aa9759e20d)
+[GitHub Gist: Markdown License Badges](https://gist.github.com/kofiav/c1059e1075b67582e86b07aa9759e20d)
 
 ## Contact
 Developer: Heinz Ulrich V
@@ -96,4 +106,4 @@ GitHub: [TheOarsman](https://www.github.com/TheOarsman)
 
 LinkedIn: [Heinz Ulrich V](https://www.linkedin.com/in/heinz-ulrich-v-3a3486a0/)
 
-E-Mail: [heinzulrichv@gmail.com](heinzulrichv@gmail.com)
+E-Mail: <heinzulrichv@gmail.com>
