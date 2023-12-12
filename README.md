@@ -4,7 +4,7 @@ A command-line application that dynamically generates a README.md file from a us
 
 // Web Address to go here //
 
-![Alt text](MRKDWN.jpg)
+![Alt text](./images/MRKDWN.jpg)
 
 ## Tabel on Contents
 - [README.md Generator   ](#readmemd-generator---)
